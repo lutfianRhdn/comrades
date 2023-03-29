@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.google.gms:google-services:4.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "http://maven.openrainbow.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    arch = '1.1.1'
+    supportLibrary = '28.0.0'
+    constraintLayout = '1.1.3'
+    multidex = '1.0.3'
+    flexbox = '1.0.0'
+    firebaseCore = '16.0.5'
+    firebaseMessaging = '17.3.4'
+    circleImage = '2.1.0'
+    butterKnife = '8.8.1'
+    retrofit = '2.4.0'
+    rxjava = '2.2.0'
+    rxandroid = '2.0.2'
+    fresco = '1.10.0'
+    annimonStream = '1.2.1'
+    rainbow = '1.40.0'
+    playAuth = '16.0.1'
+
+    junit = '4.12'
+
+    uitest = '1.0.2'
+    espresso = '3.0.2'
+}

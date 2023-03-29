@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_activity_add_reminder"
+        layout="@layout/toolbar_main" />
+
+    <ViewStub
+        android:id="@+id/vs_activity_add_reminder_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/vs_activity_add_reminder_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_activity_add_reminder" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_activity_add_reminder_save"
+        style="@style/Button.Primary"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:enabled="false"
+        android:text="@string/save_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vs_activity_add_reminder_form" />
+
+    <ProgressBar
+        android:id="@+id/pb_activity_add_reminder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/progress_bar_margin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btn_activity_add_reminder_save"
+        app:layout_constraintEnd_toEndOf="@id/btn_activity_add_reminder_save"
+        app:layout_constraintStart_toStartOf="@id/btn_activity_add_reminder_save"
+        app:layout_constraintTop_toTopOf="@id/btn_activity_add_reminder_save" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_activity_add_reminder_cancel"
+        style="@style/Button.Dark"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:text="@string/cancel_label"
+        app:layout_constraintEnd_toStartOf="@id/btn_activity_add_reminder_save"
+        app:layout_constraintTop_toTopOf="@id/btn_activity_add_reminder_save" />
+
+</android.support.constraint.ConstraintLayout>

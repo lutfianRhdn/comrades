@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_large">
+
+    <ImageView
+        android:id="@+id/iv_activity_login_comrades_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_very_large"
+        android:contentDescription="@string/comrades_logo_content_description"
+        android:src="@drawable/comrades_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_activity_login_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/til_activity_login_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_activity_login_comrades_logo"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_activity_login_email"
+            style="@style/TextField"
+            android:hint="@string/email_label"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_activity_login_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard"
+        app:layout_constraintBottom_toTopOf="@id/tv_activity_login_forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_activity_login_email">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_activity_login_password"
+            style="@style/TextField"
+            android:hint="@string/password_label"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_activity_login_forgot_password"
+        style="@style/TextView.H4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:text="@string/forgot_password_label"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/btn_activity_login_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_activity_login_password" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_activity_login_login"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_large"
+        android:enabled="false"
+        android:text="@string/signin_label"
+        app:layout_constraintBottom_toTopOf="@id/tv_or"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_activity_login_forgot_password" />
+
+    <ProgressBar
+        android:id="@+id/pb_activity_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/progress_bar_margin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btn_activity_login_login"
+        app:layout_constraintEnd_toEndOf="@id/btn_activity_login_login"
+        app:layout_constraintStart_toStartOf="@id/btn_activity_login_login"
+        app:layout_constraintTop_toTopOf="@id/btn_activity_login_login" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_size"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_or"
+        app:layout_constraintEnd_toStartOf="@+id/tv_or"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_or" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_or"
+        style="@style/TextView.H4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/or_label"
+        app:layout_constraintBottom_toTopOf="@+id/btn_activity_login_google_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_activity_login_login" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_size"
+        android:layout_marginStart="@dimen/margin_large"
+        android:background="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_or"
+        app:layout_constraintTop_toTopOf="@+id/tv_or" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_activity_login_google_login"
+        style="@style/Button.GoogleSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:drawableStart="@drawable/google"
+        android:paddingEnd="@dimen/google_signin_button_padding"
+        android:paddingStart="@dimen/google_signin_button_padding"
+        android:text="@string/google_signin_label"
+        app:layout_constraintBottom_toTopOf="@+id/dont_have_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_or" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/dont_have_account"
+        style="@style/TextView.H4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dont_have_account_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_activity_login_register"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_activity_login_register"
+        style="@style/TextView.H4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:text="@string/register_label"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dont_have_account"
+        app:layout_constraintTop_toTopOf="@id/dont_have_account" />
+
+</android.support.constraint.ConstraintLayout>

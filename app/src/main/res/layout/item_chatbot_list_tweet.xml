@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_relative"
+    android:layout_width="@dimen/item_chatbot_list_news_image_width"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_large"
+    android:background="@drawable/item_chatbot_list_background">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_item_chatbot_list_news_header"
+        app:placeholderImage="@drawable/next"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/item_chatbot_list_news_header_content_desc"
+        app:roundedCornerRadius="@dimen/item_friend_to_share_background_radius"
+        app:roundingBorderColor="@color/colorBorder"
+        app:roundingBorderWidth="@dimen/border_size"
+        tools:src="@color/colorPrimary" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_chatbot_list_news_title"
+        style="@style/TextView"
+        android:layout_toRightOf="@id/sdv_item_chatbot_list_news_header"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingBottom="@dimen/margin_standard"
+        android:paddingEnd="@dimen/margin_large"
+        android:paddingStart="@dimen/margin_large"
+        android:paddingTop="@dimen/margin_standard"
+        android:textStyle="bold"
+        tools:text="Berikut adalah data pengidap HIV dan AIDS di Indonesia ada tahun 2018" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_chatbot_list_news_time"
+        android:layout_below="@id/sdv_item_chatbot_list_news_header"
+        style="@style/TextView"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:paddingBottom="@dimen/margin_standard"
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_large"
+        tools:text="17 Jam yang lalu" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_chatbot_list_news_divider"
+        style="@style/TextView"
+        android:layout_toRightOf="@id/tv_item_chatbot_list_news_time"
+        android:layout_below="@id/tv_item_chatbot_list_news_title"
+        android:text="@string/text_divider" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_chatbot_list_news_source"
+        style="@style/TextView"
+        android:paddingBottom="@dimen/margin_standard"
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_small"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/sdv_item_chatbot_list_news_header"
+
+        android:layout_below="@id/tv_item_chatbot_list_news_title"
+        tools:text="Unikom News" />
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_activity_register"
+        layout="@layout/toolbar_main" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_activity_register_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_activity_register">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_activity_register_name"
+            style="@style/TextField"
+            android:hint="@string/name_label"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_activity_register_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintEnd_toEndOf="@id/til_activity_register_name"
+        app:layout_constraintStart_toStartOf="@id/til_activity_register_name"
+        app:layout_constraintTop_toBottomOf="@id/til_activity_register_name">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_activity_register_email"
+            style="@style/TextField"
+            android:hint="@string/email_label"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_activity_register_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintEnd_toEndOf="@id/til_activity_register_name"
+        app:layout_constraintStart_toStartOf="@id/til_activity_register_name"
+        app:layout_constraintTop_toBottomOf="@id/til_activity_register_email">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_activity_register_password"
+            style="@style/TextField"
+            android:hint="@string/password_label"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_activity_register_gender"
+        style="@style/TextView.H4"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/gender_label"
+        app:layout_constraintStart_toStartOf="@id/til_activity_register_email"
+        app:layout_constraintTop_toBottomOf="@id/til_activity_register_password" />
+
+    <RadioGroup
+        android:id="@+id/rg_activity_register_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tv_activity_register_gender"
+        app:layout_constraintTop_toBottomOf="@id/tv_activity_register_gender">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rb_activity_register_male"
+            style="@style/Radio"
+            android:checked="true"
+            android:text="@string/male_label" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rb_activity_register_female"
+            style="@style/Radio"
+            android:layout_marginStart="@dimen/margin_large"
+            android:text="@string/female_label" />
+
+    </RadioGroup>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_activity_register_birth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintEnd_toEndOf="@id/til_activity_register_name"
+        app:layout_constraintStart_toStartOf="@id/til_activity_register_name"
+        app:layout_constraintTop_toBottomOf="@id/rg_activity_register_gender">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_activity_register_birth"
+            style="@style/TextField"
+            android:hint="@string/birth_date_label"
+            android:inputType="none" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_activity_register_phone"
+        style="@style/TextView.H4"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/phone_number_label"
+        app:layout_constraintStart_toStartOf="@id/til_activity_register_email"
+        app:layout_constraintTop_toBottomOf="@id/til_activity_register_birth" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spinner_activity_register_phone_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_standard"
+        app:fontFamily="@font/lato"
+        app:layout_constraintBottom_toBottomOf="@id/et_activity_register_phone"
+        app:layout_constraintStart_toStartOf="@id/til_activity_register_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_activity_register_phone" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_activity_register_phone"
+        style="@style/TextField"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@id/til_activity_register_name"
+        app:layout_constraintStart_toEndOf="@id/spinner_activity_register_phone_prefix"
+        app:layout_constraintTop_toTopOf="@id/spinner_activity_register_phone_prefix" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_activity_register_next"
+        style="@style/Button.Primary"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/margin_very_large"
+        android:enabled="false"
+        android:text="@string/next_label"
+        app:layout_constraintEnd_toEndOf="@id/til_activity_register_name"
+        app:layout_constraintStart_toStartOf="@id/til_activity_register_name"
+        app:layout_constraintTop_toBottomOf="@id/et_activity_register_phone" />
+
+</android.support.constraint.ConstraintLayout>

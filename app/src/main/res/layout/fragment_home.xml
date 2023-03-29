@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/pb_fragment_home_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_fragment_home_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_fragment_home_comrades_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:src="@drawable/comrades_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_greeting"
+                style="@style/TextView.H1"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/civ_fragment_home_comrades_logo"
+                tools:text="Selamat pagi, Satria" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_topic_suggestion_label"
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="@string/fragment_home_topic_suggestion_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_greeting" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_cora_label"
+                style="@style/TextView.H3"
+                android:layout_marginEnd="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/cora_label"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:fontFamily="@font/montserrat"
+                app:layout_constraintEnd_toStartOf="@id/iv_fragment_home_cora_navigation"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_home_cora_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:contentDescription="@string/fragment_home_cora_navigation_content_description"
+                android:src="@drawable/arrow"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_cora_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_fragment_home_cora_label" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_fragment_home_topic_suggestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_topic_suggestion_label" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_reminder_label"
+                style="@style/TextView.H1"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/label_reminder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_topic_suggestion" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_selengkapnya"
+                style="@style/TextView.H4"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:text="@string/label_all_reminders"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_reminder_label"
+                app:layout_constraintStart_toEndOf="@id/tv_fragment_home_reminder_label" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_home_add_reminder"
+                android:layout_width="@dimen/fragment_home_add_reminder_size"
+                android:layout_height="@dimen/fragment_home_add_reminder_size"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:contentDescription="@string/fragment_home_add_reminder_content_description"
+                android:src="@drawable/plus"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_reminder_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_fragment_home_reminder_label" />
+
+            <LinearLayout
+                android:id="@+id/ll_fragment_home_reminder"
+                style="@style/Box.Primary"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_reminder_label">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_fragment_home_next_reminder_title"
+                    style="@style/TextView.H3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    tools:text="Maraviviroc (MVC)kl;aksl;aksl;a aks" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_fragment_home_next_reminder_time"
+                    style="@style/TextView.H4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_standard"
+                    android:textColor="@android:color/white"
+                    tools:text="20 menit lagi" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_active_conversation_label"
+                style="@style/TextView.H1"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/label_active_conversation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_fragment_home_reminder" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_home_active_indicator"
+                android:layout_width="@dimen/fragment_home_online_indicator_size"
+                android:layout_height="@dimen/fragment_home_online_indicator_size"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:src="@drawable/fragment_home_active_indicator"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_active_conversation_label"
+                app:layout_constraintStart_toEndOf="@id/tv_fragment_home_active_conversation_label"
+                app:layout_constraintTop_toTopOf="@id/tv_fragment_home_active_conversation_label"
+                tools:ignore="contentDescription" />
+
+            <RelativeLayout
+                android:id="@+id/rl_fragment_home_last_chat_heading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:background="@drawable/fragment_home_last_chat_heading_background"
+                android:padding="@dimen/margin_standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_active_conversation_label">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_fragment_home_last_chat_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_fragment_home_last_chat_time"
+                    android:layout_alignTop="@id/tv_fragment_home_cora_label1"
+                    android:src="@color/colorPrimary" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_fragment_home_cora_label1"
+                    style="@style/TextView.H2"
+                    android:layout_marginStart="@dimen/margin_standard"
+                    android:layout_toEndOf="@id/civ_fragment_home_last_chat_image"
+                    android:text="@string/cora_label"
+                    android:textColor="@color/colorPrimary" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_fragment_home_last_chat_time"
+                    style="@style/TextView"
+                    android:layout_alignStart="@id/tv_fragment_home_cora_label1"
+                    android:layout_below="@id/tv_fragment_home_cora_label1"
+                    tools:text="20 menit yang lalu" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_fragment_home_last_chat_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fragment_home_last_chat_content_background"
+                android:padding="@dimen/margin_standard"
+                app:layout_constraintEnd_toEndOf="@id/rl_fragment_home_last_chat_heading"
+                app:layout_constraintStart_toStartOf="@id/rl_fragment_home_last_chat_heading"
+                app:layout_constraintTop_toBottomOf="@id/rl_fragment_home_last_chat_heading">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_fragment_home_last_chat_content"
+                    style="@style/TextView.H3"
+                    tools:text="Apakah HIV dapat menular melalui sentuhan dengan yang lainnya" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_news_label"
+                style="@style/TextView.H1"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/label_news"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_fragment_home_last_chat_content" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_fragment_home_all_news"
+                style="@style/TextView.H4"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:text="@string/label_all_news"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_news_label"
+                app:layout_constraintStart_toEndOf="@id/tv_fragment_home_news_label" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_fragment_home_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_all_news" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

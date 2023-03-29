@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_very_large">64dp</dimen>
+    <dimen name="margin_chip">12dp</dimen>
+
+    <dimen name="border_size">0.5dp</dimen>
+    <dimen name="border_radius">30dp</dimen>
+    <dimen name="border_radius_rect">15dp</dimen>
+</resources>

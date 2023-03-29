@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Box.DarkRounded"
+    android:layout_marginBottom="@dimen/margin_standard"
+    android:paddingBottom="@dimen/margin_standard"
+    android:paddingEnd="@dimen/margin_large"
+    android:paddingStart="@dimen/margin_large"
+    android:paddingTop="@dimen/margin_standard">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_item_friend_to_share_photo"
+        android:layout_width="@dimen/item_friend_to_share_photo_size"
+        android:layout_height="@dimen/item_friend_to_share_photo_size"
+        app:layout_constraintBottom_toBottomOf="@id/tv_item_friend_to_share_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_item_friend_to_share_name"
+        app:roundAsCircle="true" />
+
+    <ImageView
+        android:id="@+id/iv_item_friend_to_share_online_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/content_description_online_status"
+        android:src="@drawable/online"
+        app:layout_constraintBottom_toBottomOf="@id/sdv_item_friend_to_share_photo"
+        app:layout_constraintEnd_toEndOf="@id/sdv_item_friend_to_share_photo" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_friend_to_share_name"
+        style="@style/TextView"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/tv_item_friend_to_share_location"
+        app:layout_constraintStart_toEndOf="@id/sdv_item_friend_to_share_photo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Emma" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_friend_to_share_location"
+        style="@style/TextView"
+        app:fontFamily="@font/latolight"
+        app:layout_constraintBottom_toTopOf="@id/tv_item_friend_to_share_price"
+        app:layout_constraintStart_toStartOf="@id/tv_item_friend_to_share_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_friend_to_share_name"
+        tools:text="Rumah Cemara " />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_friend_to_share_price"
+        style="@style/TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_item_friend_to_share_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_friend_to_share_location"
+        tools:text="Rp.6000 / Sesi" />
+
+
+    <ImageView
+        android:id="@+id/iv_item_friend_to_share_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:contentDescription="@string/star_content_description"
+        android:src="@drawable/star"
+        app:layout_constraintEnd_toStartOf="@id/tv_item_friend_to_share_rating"
+        app:layout_constraintTop_toTopOf="@id/tv_item_friend_to_share_rating" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_item_friend_to_share_rating"
+        style="@style/TextView"
+        android:layout_marginEnd="@dimen/margin_standard"
+        app:layout_constraintBottom_toBottomOf="@id/tv_item_friend_to_share_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_item_friend_to_share_name"
+        tools:text="4.5" />
+
+</android.support.constraint.ConstraintLayout>

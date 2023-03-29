@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/margin_large"
+    android:paddingStart="@dimen/margin_large">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_fragment_profile_photo"
+        style="@style/Box.DarkRounded"
+        android:padding="@dimen/margin_very_large">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_fragment_profile_photo"
+            android:layout_width="@dimen/fragment_profile_photo_size"
+            android:layout_height="@dimen/fragment_profile_photo_size"
+            app:layout_constraintBottom_toTopOf="@id/tv_fragment_profile_name_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundAsCircle="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_fragment_profile_name_photo"
+            style="@style/TextView.H1"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sdv_fragment_profile_photo"
+            tools:text="John Doe" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_email_label"
+        style="@style/TextView.H4"
+        android:layout_marginTop="@dimen/margin_very_large"
+        android:text="@string/email_label"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/cl_fragment_profile_photo" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_email"
+        style="@style/TextView.H2.FragmentProfile"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_email_label"
+        tools:text="contact@johndoe.com" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_gender_label"
+        style="@style/TextView.H4.FragmentProfile"
+        android:text="@string/gender_label"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_email" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_gender"
+        style="@style/TextView.H2.FragmentProfile"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_gender_label"
+        tools:text="Male" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_birth_label"
+        style="@style/TextView.H4.FragmentProfile"
+        android:text="@string/birth_date_label"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_gender" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_birth"
+        style="@style/TextView.H2.FragmentProfile"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_birth_label"
+        tools:text="17 Juni 1980" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_phone_label"
+        style="@style/TextView.H4.FragmentProfile"
+        android:text="@string/phone_number_label"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_birth" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_phone"
+        style="@style/TextView.H2.FragmentProfile"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_phone_label"
+        tools:text="+62 853 7078 984" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fragment_profile_change_password"
+        style="@style/TextView.H4"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/change_password_label"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/cl_fragment_profile_photo"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_profile_phone" />
+
+</android.support.constraint.ConstraintLayout>

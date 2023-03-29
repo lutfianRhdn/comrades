@@ -1,0 +1,81 @@
+apply plugin: "com.android.application"
+
+android {
+    signingConfigs {
+        config {
+            keyAlias "comrade"
+            keyPassword "code@labs"
+            storeFile file("/media/satadii11/72D61424D613E75F/Codelabs/Tim Produk/Comrades/Source Code/comrades-redesign/keystore_comrade.jks")
+            storePassword "code@labs"
+        }
+    }
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "id.comrade"
+        minSdkVersion 17
+        targetSdkVersion 33
+        versionCode 44
+        versionName "1.3.2-alcatel_comrades-dev"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '33.0.2'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation "com.android.support:support-v4:$rootProject.supportLibrary"
+    //noinspection GradleCompatible
+    implementation "com.android.support:support-media-compat:$rootProject.supportLibrary"
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibrary"
+    //noinspection GradleCompatible
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibrary"
+    //noinspection GradleCompatible
+    implementation "com.android.support:design:$rootProject.supportLibrary"
+    //noinspection GradleCompatible
+    implementation "com.android.support:exifinterface:$rootProject.supportLibrary"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
+    implementation "com.android.support:multidex:$rootProject.multidex"
+    implementation "com.google.android.gms:play-services-auth:$rootProject.playAuth"
+    implementation "com.google.android:flexbox:$rootProject.flexbox"
+    implementation "com.google.firebase:firebase-core:$rootProject.firebaseCore"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.firebaseMessaging"
+    implementation "android.arch.lifecycle:extensions:$rootProject.arch"
+    implementation "android.arch.persistence.room:runtime:$rootProject.arch"
+    implementation "android.arch.persistence.room:rxjava2:$rootProject.arch"
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleImage"
+    implementation "com.jakewharton:butterknife:$rootProject.butterKnife"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit"
+
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.rxjava"
+    implementation "com.facebook.fresco:fresco:$rootProject.fresco"
+    implementation "com.annimon:stream:$rootProject.annimonStream"
+
+    testImplementation "junit:junit:$rootProject.junit"
+
+    androidTestImplementation "com.android.support.test:runner:$rootProject.uitest"
+    androidTestImplementation "com.android.support.test:rules:$rootProject.uitest"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espresso"
+
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.arch"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterKnife"
+}
+apply plugin: "com.google.gms.google-services"

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_standard"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        style="@style/Box.ItemReminderActiveContent"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:minHeight="@dimen/item_reminder_min_height"
+        android:padding="@dimen/margin_standard">
+
+        <ImageView
+            android:id="@+id/iv_item_reminder_active_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_description_medicine"
+            android:src="@drawable/medicine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_item_reminder_active_medicine_name"
+            style="@style/TextView.H2"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:maxLines="2"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_reminder_active_every_label"
+            app:layout_constraintEnd_toStartOf="@id/iv_item_reminder_active_menu"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_reminder_active_medicine"
+            app:layout_constraintTop_toTopOf="@id/iv_item_reminder_active_medicine"
+            tools:text="Maraviroc (MVC)jklajslkajskljalksjakljslk" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_item_reminder_active_every_label"
+            style="@style/TextView"
+            android:text="@string/label_every"
+            app:layout_constraintBottom_toBottomOf="@id/iv_item_reminder_active_medicine"
+            app:layout_constraintStart_toStartOf="@id/tv_item_reminder_active_medicine_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_reminder_active_medicine_name" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_item_reminder_active_time"
+            style="@style/TextView"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_item_reminder_active_every_label"
+            app:layout_constraintTop_toTopOf="@id/tv_item_reminder_active_every_label"
+            tools:text="00:00 &amp; 06:00" />
+
+        <ImageView
+            android:id="@+id/iv_item_reminder_active_menu"
+            android:layout_width="@dimen/iv_item_reminder_menu_size"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_description_reminder_menu"
+            android:src="@drawable/path"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        style="@style/Box.ItemReminderActiveAction"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:padding="@dimen/margin_large">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_item_reminder_active_action_time"
+            style="@style/TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="06:00 Dose" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_item_reminder_active_taken"
+            style="@style/TextView"
+            android:text="@string/label_taken"
+            android:textAllCaps="true"
+            android:textColor="@color/colorGreen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_item_reminder_active_taken"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginTop="2dp"
+            android:contentDescription="@string/medicine_taken_content_description"
+            android:src="@drawable/taken"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_reminder_active_taken"
+            app:layout_constraintEnd_toStartOf="@id/tv_item_reminder_active_taken"
+            app:layout_constraintTop_toTopOf="@id/tv_item_reminder_active_taken" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_item_reminder_active_missed"
+            style="@style/TextView"
+            android:layout_marginEnd="@dimen/margin_standard"
+            android:text="@string/label_missed"
+            android:textAllCaps="true"
+            android:textColor="@color/colorDanger"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_item_reminder_active_taken"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_item_reminder_active_missed"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginTop="2dp"
+            android:contentDescription="@string/content_description_missed_medicine"
+            android:src="@drawable/missed"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_reminder_active_missed"
+            app:layout_constraintEnd_toStartOf="@id/tv_item_reminder_active_missed"
+            app:layout_constraintTop_toTopOf="@id/tv_item_reminder_active_missed" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

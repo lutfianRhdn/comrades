@@ -1,0 +1,236 @@
+<resources>
+    <string name="app_name">Comrades</string>
+
+    <string name="cora_label">Cora</string>
+
+    <string name="edit_label">Edit</string>
+    <string name="name_label">Name</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="gender_label">Gender</string>
+    <string name="birth_date_label">Birth Date</string>
+    <string name="phone_number_label">Phone Number</string>
+    <string name="forgot_password_label">Forgot password?</string>
+    <string name="male_label">Male</string>
+    <string name="female_label">Female</string>
+    <string name="save_label">Save</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="home_label">Home</string>
+    <string name="profile_label">Profile</string>
+    <string name="signin_label">Sign In</string>
+    <string name="google_signin_label">Sign In With Google</string>
+    <string name="or_label">or</string>
+    <string name="morning_label">Morning</string>
+    <string name="noon_label">Afternoon</string>
+    <string name="evening_label">Evening</string>
+    <string name="night_label">Night</string>
+    <string name="label_setting">Settings</string>
+    <string name="label_help">Help</string>
+    <string name="label_terms">Terms and Conditions</string>
+    <string name="label_about">About</string>
+    <string name="label_tell_your_friends">Tell your friends</string>
+    <string name="label_logout">Logout</string>
+    <string name="label_reminder">Reminder</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_eight_hours">8 Hours</string>
+    <string name="label_twelve_hours">12 Hours</string>
+    <string name="label_jenis_arv">ARV</string>
+    <string name="label_starting_time">Starting Time</string>
+    <string name="content_description_medicine">Medicine Image</string>
+    <string name="label_every">Every</string>
+    <string name="label_live_in">Live in</string>
+    <string name="label_member_of">Member of</string>
+    <string name="label_start_chatting">Start Chatting</string>
+    <string name="label_edit_profile">Edit Profile</string>
+    <string name="label_edit_reminder">Edit Reminder</string>
+    <string name="label_error">Something went wrong! Please contact the developer for immediate fix</string>
+    <string name="label_price_per_session">%s/Session</string>
+
+    <string name="error_empty_string">Cannot be empty!</string>
+
+    <string name="fragment_home_greeting">Good %s, %s</string>
+    <string name="fragment_home_topic_suggestion_label">
+        Ask Cora everything about HIV/AIDS, you can start with some topics below
+    </string>
+    <string name="fragment_home_cora_navigation_content_description">Chat Cora Button</string>
+    <string name="label_active_conversation">Active Conversation</string>
+
+    <string name="fragment_friend_to_share_search_label">Search Friends to Share</string>
+    <string name="fragment_friend_to_share_search_content_description">Search Button</string>
+
+    <string name="star_content_description">Rating Image</string>
+
+    <string name="activity_chatbot_chatbox_hint">Mau nanya apa?</string>
+    <string name="item_chatbot_heading_welcome_content">
+        I\'m Cora, your friend to understand HIV/AIDS. Ask me anything about HIV/AIDS.
+    </string>
+    <string name="item_chatbot_list_friend_to_share_profpic_content_desc">Friend to Share Photo</string>
+    <string name="item_chatbot_list_news_header_content_desc">Headline News</string>
+    <string name="text_divider">-</string>
+
+    <string name="label_all_reminders">All Reminders</string>
+    <string name="fragment_home_add_reminder_content_description">Add New Reminder</string>
+
+    <string name="time_difference_minute">%d minutes ago</string>
+    <string name="time_difference_hour">%d hours ago</string>
+    <string name="time_difference_day">%d days ago</string>
+
+    <string name="time_upcoming_minutes">In %d minutes</string>
+    <string name="time_upcoming_hours">In %d hours</string>
+
+    <!-- CHATBOT KEYWORD -->
+    <string name="keyword_berita">berita</string>
+    <string name="keyword_konsultasi">konsultasi</string>
+    <string name="keyword_event">event</string>
+    <string name="keyword_artikel">artikel</string>
+    <string name="keyword_tweet">tweet dukungan</string>
+    <string name="keyword_mitos_hiv">Mitos HIV</string>
+    <string name="keyword_sharing_friend">Komunitas Berbagi</string>
+    <string name="keyword_tempat_konsultasi">Tempat Konsultasi</string>
+    <string name="keyword_cerita">Cerita</string>
+    <string name="keyword_lokasi_arv">Tempat Layanan ARV</string>
+    <string name="keyword_group_chat">Group Chat</string>
+
+    <!-- CHATBOT RESPONNSE -->
+    <string name="response_berita">
+        Here are the latest news about HIV/AIDS
+    </string>
+    <string name="response_konsultasi">
+        Here are a list of friend who can be a consultant
+    </string>
+    <string name="response_event">
+        Here are the latest event about HIV/AIDS
+    </string>
+    <string name="response_artikel">
+        Here are the latest articles about HIV/AIDS
+    </string>
+    <string name="response_tweet">
+        Here are some peoples that always support you. So make sure to not giving up and cheers ^_^
+    </string>
+
+    <string name="comrades_logo_content_description">Comrades Logo</string>
+    <string name="dont_have_account_label">Don\'t have an account?</string>
+    <string name="register_label">Register</string>
+    <string name="register_as_label">Register as a</string>
+    <string name="user_label">User</string>
+    <string name="friend_to_share_label">Friend to Share</string>
+    <string name="user_capability_label">You can do consultation with Friend to Share</string>
+    <string name="register_as_user_label">Register as User</string>
+    <string name="friend_capability_label">
+        You can help society by answering ask of consultation support with Sticker of Support to people living with HIV/AIDS
+    </string>
+    <string name="register_as_friend_label">Register as Friend to Share</string>
+    <string name="email_validation">Make sure to enter valid email address</string>
+    <string name="next_label">Next</string>
+    <string name="form_validation">Make sure to fill the form correctly</string>
+    <string name="send_label">Send</string>
+    <string name="textbox_image_content_description">Send Chat Button</string>
+    <string name="change_password_label">Change Password</string>
+
+    <string name="edit_profile_menu_content_description">Tap to edit profile</string>
+    <string name="settings_menu_content_description">Tap to go to settings</string>
+    <string name="cora_dont_understand">Excuse me, i don\'t get what you are saying.</string>
+    <string name="label_more">More</string>
+    <string name="label_set_reminder">Set Reminder</string>
+    <string name="reminder_not_found">You haven\'t add any reminder yet.</string>
+    <string name="label_all_news">All News</string>
+    <string name="label_news">News</string>
+    <string name="content_description_online_status">Online Status</string>
+    <string name="alarm_notification">It\'s time for medicine.</string>
+    <string name="content_description_reminder_menu">Open reminder menu</string>
+    <string name="label_taken">Taken</string>
+    <string name="label_missed">Missed</string>
+    <string name="medicine_taken_content_description">Medicine has been taken</string>
+    <string name="content_description_missed_medicine">Missed the medicine</string>
+    <string name="success_add_reminder">Success set a new reminder</string>
+    <string name="success_edit_reminder">Success update a reminder</string>
+    <string name="success_delete_reminder">Success delete a reminder</string>
+    <string name="delete_verification">Are you sure you want to delete this reminder ?</string>
+    <string name="delete_message">This reminder will be delete from you device. But you still can add another reminder later.</string>
+    <string name="alert_positive_label">Yes, i\'m sure</string>
+    <string name="alert_negative_label">Let me think again</string>
+    <string name="label_comrades_news">Comrades News</string>
+    <string name="label_friend_profile">Friend Profile</string>
+    <string name="registration_success">You have successfully register a new account. Login first to using application.</string>
+    <string name="edit_success">You have successfully edit your account.</string>
+    <string name="email_already_exist">Email is already exist. Please try using different email.</string>
+    <string name="password_validation">Password should contain at least 6 characters</string>
+
+    <string name="response_group_chat">Please wait a few minutes.</string>
+    <string name="last_seen_label">Last seen today at %s</string>
+
+    <string name="ConnectionEstablishedMsg">Service Connection with HelloAccessory(P) has been established.</string>
+    <string name="ConnectionTerminateddMsg">Service Connection with HelloAccessory(P) has been terminated.</string>
+    <string name="ConnectionAlreadyExist">Service Connection has already been existed!!!</string>
+    <string name="ConnectionAlreadyDisconnected">Service Connection has already been disconnected!!!</string>
+    <string name="ConnectionFailure">Service Connection Failure</string>
+    <string name="NoPeersFound">No peers have been found!!!</string>
+    <string name="buttonConnect">Connect</string>
+    <string name="buttonDisconnect">Disconnect</string>
+    <string name="buttonSend">Send</string>
+    <string name="google_sign_in_failed">Terjadi kesalahan saat mengambil data dari Google</string>
+
+    <string-array name="dial_code">
+        <item>+62</item>
+        <item>+93</item>
+        <item>+355</item>
+        <item>+213</item>
+        <item>+1684</item>
+        <item>+376</item>
+        <item>+244</item>
+        <item>+1264</item>
+        <item>+672</item>
+        <item>+1268</item>
+        <item>+54</item>
+        <item>+374</item>
+        <item>+297</item>
+        <item>+61</item>
+        <item>+43</item>
+        <item>+994</item>
+        <item>+1242</item>
+        <item>+973</item>
+        <item>+880</item>
+        <item>+1246</item>
+        <item>+375</item>
+        <item>+32</item>
+        <item>+501</item>
+        <item>+229</item>
+        <item>+1441</item>
+        <item>+975</item>
+        <item>+387</item>
+        <item>+267</item>
+        <item>+55</item>
+        <item>+246</item>
+        <item>+1284</item>
+        <item>+673</item>
+        <item>+359</item>
+        <item>+226</item>
+        <item>+257</item>
+        <item>+855</item>
+        <item>+237</item>
+        <item>+1</item>
+        <item>+238</item>
+        <item>+1345</item>
+        <item>+236</item>
+        <item>+235</item>
+        <item>+56</item>
+        <item>+86</item>
+        <item>+61</item>
+        <item>+57</item>
+        <item>+269</item>
+        <item>+682</item>
+        <item>+506</item>
+        <item>+385</item>
+        <item>+53</item>
+        <item>+599</item>
+        <item>+357</item>
+        <item>+420</item>
+        <item>+243</item>
+        <item>+45</item>
+        <item>+253</item>
+        <item>+1767</item>
+        <item>+1809</item>
+        <item>+1829</item>
+        <item>+1849</item>
+    </string-array>
+</resources>

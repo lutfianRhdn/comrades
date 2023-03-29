@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_activity_friend_photo"
+        layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_activity_friend_photo">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_activity_friend_profile_photo"
+                style="@style/Box.DarkRounded"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:padding="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_activity_friend_profile_photo"
+                    android:layout_width="@dimen/fragment_profile_photo_size"
+                    android:layout_height="@dimen/fragment_profile_photo_size"
+                    android:layout_marginTop="@dimen/margin_very_large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:roundAsCircle="true" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_friend_profile_name_photo"
+                    style="@style/TextView.H1"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sdv_activity_friend_profile_photo"
+                    tools:text="John Doe" />
+
+                <ImageView
+                    android:id="@+id/iv_activity_friend_profile_star_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_standard"
+                    android:contentDescription="@string/star_content_description"
+                    android:src="@drawable/star"
+                    app:layout_constraintEnd_toStartOf="@id/iv_activity_friend_profile_star_2"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_activity_friend_profile_name_photo" />
+
+                <ImageView
+                    android:id="@+id/iv_activity_friend_profile_star_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:contentDescription="@string/star_content_description"
+                    android:src="@drawable/star"
+                    app:layout_constraintEnd_toStartOf="@id/iv_activity_friend_profile_star_3"
+                    app:layout_constraintStart_toEndOf="@id/iv_activity_friend_profile_star_1"
+                    app:layout_constraintTop_toTopOf="@id/iv_activity_friend_profile_star_1" />
+
+                <ImageView
+                    android:id="@+id/iv_activity_friend_profile_star_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:contentDescription="@string/star_content_description"
+                    android:src="@drawable/star"
+                    app:layout_constraintEnd_toStartOf="@id/iv_activity_friend_profile_star_4"
+                    app:layout_constraintStart_toEndOf="@id/iv_activity_friend_profile_star_2"
+                    app:layout_constraintTop_toTopOf="@id/iv_activity_friend_profile_star_1" />
+
+                <ImageView
+                    android:id="@+id/iv_activity_friend_profile_star_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:contentDescription="@string/star_content_description"
+                    android:src="@drawable/star"
+                    app:layout_constraintEnd_toStartOf="@id/iv_activity_friend_profile_star_5"
+                    app:layout_constraintStart_toEndOf="@id/iv_activity_friend_profile_star_3"
+                    app:layout_constraintTop_toTopOf="@id/iv_activity_friend_profile_star_1" />
+
+                <ImageView
+                    android:id="@+id/iv_activity_friend_profile_star_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:contentDescription="@string/star_content_description"
+                    android:src="@drawable/star"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_activity_friend_profile_star_4"
+                    app:layout_constraintTop_toTopOf="@id/iv_activity_friend_profile_star_1" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_friend_profile_live_label"
+                    style="@style/TextView.H2"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/label_live_in"
+                    app:layout_constraintEnd_toStartOf="@id/tv_activity_friend_profile_city"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_activity_friend_profile_star_1" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_friend_profile_city"
+                    style="@style/TextView.H2"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_activity_friend_profile_live_label"
+                    app:layout_constraintTop_toTopOf="@id/tv_activity_friend_profile_live_label"
+                    tools:text="Bandung" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_friend_profile_member_label"
+                    style="@style/TextView.H2"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/label_member_of"
+                    app:layout_constraintEnd_toStartOf="@id/tv_activity_friend_profile_community_name"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_activity_friend_profile_live_label" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_friend_profile_community_name"
+                    style="@style/TextView.H2"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_activity_friend_profile_member_label"
+                    app:layout_constraintTop_toTopOf="@id/tv_activity_friend_profile_member_label"
+                    tools:text="Komunitas Graha" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_activity_friend_profile_start_chatting"
+                    style="@style/Button.Primary"
+                    android:layout_marginTop="@dimen/margin_standard"
+                    android:paddingEnd="@dimen/margin_large"
+                    android:paddingStart="@dimen/margin_large"
+                    android:text="@string/label_start_chatting"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_activity_friend_profile_community_name" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_activity_friend_profile_biography"
+                style="@style/TextView.H2"
+                android:layout_width="0dp"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/cl_activity_friend_profile_photo"
+                app:layout_constraintStart_toStartOf="@id/cl_activity_friend_profile_photo"
+                app:layout_constraintTop_toBottomOf="@id/cl_activity_friend_profile_photo"
+                tools:text="Halo, saya Emma, saya aktif dalam kegiatan positif mengenai HIV/AIDS, saya tergabung di dalam komunitas Graha, setelah bergabung dengan komunitas Graha, saya menjadi lebih bijak dalam bersikap dan bertindak dalam pergaulan yang terjadi saat ini." />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/actionBarSize">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_toolbar_konsultasi_friend_picture"
+            android:layout_width="@dimen/toolbar_konsultasi_picture"
+            android:layout_height="@dimen/toolbar_konsultasi_picture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundAsCircle="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_toolbar_konsultasi_friend_name"
+            style="@style/TextView.H1"
+            android:layout_marginStart="@dimen/margin_standard"
+            android:textAllCaps="true"
+            android:textSize="@dimen/h2_size"
+            app:layout_constraintStart_toEndOf="@id/sdv_toolbar_konsultasi_friend_picture"
+            app:layout_constraintTop_toTopOf="@id/sdv_toolbar_konsultasi_friend_picture"
+            tools:text="Emma" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_toolbar_konsultasi_friend_last_seen"
+            style="@style/TextView.H4"
+            app:layout_constraintBottom_toBottomOf="@id/sdv_toolbar_konsultasi_friend_picture"
+            app:layout_constraintStart_toStartOf="@id/tv_toolbar_konsultasi_friend_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_toolbar_konsultasi_friend_name"
+            tools:text="Last seen today at 13:49" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.Toolbar>

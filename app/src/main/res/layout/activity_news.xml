@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/pb_activity_news_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_activity_news_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_activity_news"
+            layout="@layout/toolbar_main" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_news_judul"
+                    style="@style/TextView.H1"
+                    android:paddingEnd="@dimen/margin_standard"
+                    android:paddingStart="@dimen/margin_standard"
+                    app:fontFamily="@font/lato"
+                    tools:text="Berikut adalah data pengidah HIV dan AIDS di Indonesia pada tahun 2018" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_news_komunitas"
+                    style="@style/TextView"
+                    android:layout_marginTop="@dimen/margin_standard"
+                    android:paddingEnd="@dimen/margin_standard"
+                    android:paddingStart="@dimen/margin_standard"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    tools:text="Rumah Cemara" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_news_date"
+                    style="@style/TextView"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingEnd="@dimen/margin_standard"
+                    android:paddingStart="@dimen/margin_standard"
+                    app:fontFamily="@font/latolight"
+                    tools:text="17 Juli 2017" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_activity_news_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_news_image_size"
+                    android:layout_marginTop="@dimen/margin_small" />
+
+                <WebView
+                    android:id="@+id/wv_activity_news_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_standard" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "829083232143",
+    "firebase_url": "https://new-comrades.firebaseio.com",
+    "project_id": "new-comrades",
+    "storage_bucket": "new-comrades.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829083232143:android:713a6b29fe1f6812",
+        "android_client_info": {
+          "package_name": "com.newcomrades"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829083232143-ehv2hni2evvfnm4r5l695g0ofiqjvfma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0-t93MUbg7g4DizuroaNB4OF9z_IZ8r0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829083232143:android:69cbfdd7721b0928",
+        "android_client_info": {
+          "package_name": "id.comrade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829083232143-gluihstea180l3hats7bjg0ucq2ms59f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.comrade",
+            "certificate_hash": "4f6aec865c235b5aa2dcd1d6a9270d781b3a4661"
+          }
+        },
+        {
+          "client_id": "829083232143-ehv2hni2evvfnm4r5l695g0ofiqjvfma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0-t93MUbg7g4DizuroaNB4OF9z_IZ8r0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829083232143-a6iiuuhvjf5cgo4ob91v899aldtdvlpv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

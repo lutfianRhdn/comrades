@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_standard">8dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_very_large">32dp</dimen>
+    <dimen name="margin_chip">6dp</dimen>
+    <dimen name="margin_vertical_textbox">12dp</dimen>
+
+    <dimen name="h1_size">18sp</dimen>
+    <dimen name="h2_size">16sp</dimen>
+    <dimen name="h3_size">14sp</dimen>
+    <dimen name="h4_size">12sp</dimen>
+    <dimen name="regular_size">14sp</dimen>
+    <dimen name="toolbar_size">18sp</dimen>
+
+    <dimen name="border_size">0.5dp</dimen>
+    <dimen name="border_size_layer_list">@dimen/border_size</dimen>
+    <dimen name="border_size_textfield">@dimen/border_size</dimen>
+    <dimen name="border_size_text_box">1dp</dimen>
+
+    <dimen name="border_radius">15dp</dimen>
+    <dimen name="border_radius_rect">5dp</dimen>
+
+    <dimen name="min_button_height">40dp</dimen>
+    <dimen name="progress_bar_margin">8dp</dimen>
+
+    <dimen name="fragment_profile_photo_size">64dp</dimen>
+    <dimen name="fragment_profile_name_photo_size">16sp</dimen>
+    <dimen name="heading_text_size">16sp</dimen>
+    <dimen name="fragment_profile_label_size">14sp</dimen>
+    <dimen name="fragment_profile_content_size">14sp</dimen>
+
+    <dimen name="item_friend_to_share_photo_size">64dp</dimen>
+    <dimen name="item_friend_to_share_name_size">14sp</dimen>
+    <dimen name="item_friend_to_share_love_image">32dp</dimen>
+    <dimen name="item_friend_to_share_background_radius">16dp</dimen>
+    <dimen name="item_friend_to_share_love_total_width">30dp</dimen>
+
+    <dimen name="activity_edit_profile_button_radius">32dp</dimen>
+
+    <dimen name="toolbar_title_size">20sp</dimen>
+    <dimen name="chat_message_radius">8dp</dimen>
+
+    <dimen name="item_chatbot_list_friend_to_share_profpic_size">156dp</dimen>
+    <dimen name="item_chatbot_list_friend_to_share_background_radius">16dp</dimen>
+    <dimen name="item_chatbot_list_friend_to_share">16sp</dimen>
+
+    <dimen name="item_chatbot_list_news_image_width">256dp</dimen>
+    <dimen name="item_chatbot_list_friend_to_share_card_height">216dp</dimen>
+
+    <dimen name="activity_news_image_size">180dp</dimen>
+    <dimen name="comrades_logo_size">55dp</dimen>
+    <dimen name="divider_size">2dp</dimen>
+    <dimen name="google_signin_button_padding">60dp</dimen>
+    <dimen name="activity_latest_news_headline_image_size">115dp</dimen>
+    <dimen name="item_latest_news_image_size">90dp</dimen>
+    <dimen name="iv_item_reminder_menu_size">20dp</dimen>
+    <dimen name="item_reminder_min_height">85dp</dimen>
+    <dimen name="cl_item_latest_news_min_height">95dp</dimen>
+    <dimen name="toolbar_konsultasi_picture">36dp</dimen>
+    <dimen name="fragment_home_online_indicator_size">11dp</dimen>
+    <dimen name="fragment_home_add_reminder_size">30dp</dimen>
+</resources>

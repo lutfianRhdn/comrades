@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/colorBorder" />
+            <corners
+                android:topLeftRadius="@dimen/border_radius_rect"
+                android:topRightRadius="@dimen/border_radius_rect" />
+        </shape>
+    </item>
+
+    <item
+        android:left="@dimen/border_size_layer_list"
+        android:right="@dimen/border_size_layer_list"
+        android:top="@dimen/border_size_layer_list">
+        <shape>
+            <solid android:color="@color/colorGray" />
+            <corners
+                android:topLeftRadius="@dimen/border_radius_rect"
+                android:topRightRadius="@dimen/border_radius_rect" />
+        </shape>
+    </item>
+</layer-list>
