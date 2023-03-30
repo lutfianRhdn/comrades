@@ -5,7 +5,7 @@ Comrades is a smart application as a media of HIV/AIDS education and information
 
 First, clone the repo:
 
-`git clone git@github.com:lutfianRhdn/comrades.git`
+`git clone https://github.com/lutfianRhdn/comrades.git`
 
 ### Android Studio (Recommended)
 
