@@ -17,7 +17,7 @@ import id.comrade.model.Topic;
 
 public class HomeTopicAdapter extends RecyclerView.Adapter<HomeTopicAdapter.ViewHolder> {
 
-    private static final int MAX = 6;
+    private static final int MAX = 4;
 
     private Context mContext;
 

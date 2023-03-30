@@ -14,7 +14,7 @@ import id.comrade.model.Topic;
 
 public class HeadingTopicAdapter extends RecyclerView.Adapter<HeadingTopicAdapter.ViewHolder> {
 
-    private static final int MAX = 6;
+    private static final int MAX = 4;
 
     private List<Topic> mTopics;
 

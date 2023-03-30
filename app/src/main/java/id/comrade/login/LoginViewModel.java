@@ -41,6 +41,8 @@ public class LoginViewModel extends BaseViewModel<LoginViewState> {
 
         addDisposable(userRepository.login(body)
                 .subscribe(response -> {
+                    Log.d(String.valueOf(response.code()), "login: response");
+                    Log.d(String.valueOf(response.headers().toString()), "login: response hea");
                     if (response.code() == 200) {
 
                         viewState.setLoginResponse(response.body().getResult());
