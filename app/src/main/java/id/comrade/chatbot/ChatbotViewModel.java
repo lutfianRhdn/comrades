@@ -10,6 +10,7 @@ import id.comrade.base.BaseViewModel;
 import id.comrade.chatbot.response.ResponseFactory;
 import id.comrade.model.Chat;
 import id.comrade.model.ChatArticle;
+import id.comrade.model.ChatBot;
 import id.comrade.model.ChatEvent;
 import id.comrade.model.ChatNews;
 import id.comrade.model.ChatSharingFriend;
@@ -20,6 +21,8 @@ import id.comrade.repositories.EventCache;
 import id.comrade.repositories.NewsCache;
 import id.comrade.repositories.SahabatOdhaCache;
 import id.comrade.repositories.TweetCache;
+import id.comrade.services.webservice.ChatBotApi;
+import id.comrade.services.webservice.RetrofitService;
 import id.comrade.services.webservice.coraService.APIService;
 import id.comrade.services.webservice.coraService.APIUtils;
 import id.comrade.utils.DateUtils;
@@ -59,14 +62,15 @@ public class ChatbotViewModel extends BaseViewModel<ChatbotViewState> {
     @SuppressWarnings("ConstantConditions")
     public void retrieveResponse(String message, int userid) {
         String TAG  = "cek";
-
+        Log.d(TAG, message);
         if (message.toLowerCase().indexOf("berita")>0){
             message = "berita";
         } else if (message.toLowerCase().indexOf("konsultasi")>0){
             message = "konsultasi";
         } else if (message.toLowerCase().indexOf("event")>0){
             message = "event";
-        } else if (message.toLowerCase().indexOf("tweet dukungan")>0){
+        }
+        else if (message.toLowerCase().indexOf("tweet dukungan")>0){
             message = "tweet dukungan";
         }
 
@@ -75,6 +79,8 @@ public class ChatbotViewModel extends BaseViewModel<ChatbotViewState> {
         viewState.setChats(null);
         mAPIService = APIUtils.getAPIService();
 //        Log.d(TAG, c);
+
+        Log.d(TAG, "retrieveResponse: "+ chat );
         if (chat instanceof ChatNews) {
             Log.d(TAG, "berita ");
 
@@ -141,34 +147,23 @@ public class ChatbotViewModel extends BaseViewModel<ChatbotViewState> {
             getViewState().setValue(viewState);
         } else {
             sendPost(message, userid);
-            viewState.setError(null);
-
-            Chat response = new Chat(
-                    getApplication().getString(R.string.cora_dont_understand),
-                    DateUtils.getDate(),
-                    DateUtils.getTime(),
-                    Chat.READ,
-                    ChatbotAdapter.CHATBOT_NAME,
-                    ChatbotAdapter.CHATBOT_SEND_TO);
-            viewState.setChat(response);
-            getViewState().setValue(viewState);
         }
     }
 
     public void sendPost(String chat, int userid) {
-        Log.d("cek", "sendPost: ");
-        mAPIService.savePost(chat, userid).enqueue(new Callback<Post>() {
+        ChatbotViewState viewState = getViewState().getValue();
+        ChatBotApi mAPIService = RetrofitService.getInstance().create(ChatBotApi.class);
+        ChatBot chatBot = new ChatBot();
+        chatBot.setText(chat);
+        Call<ChatBot> call = mAPIService.sendChatMessage(chatBot);
+        call.enqueue(new Callback<ChatBot>() {
             @Override
-            public void onResponse(Call<Post> call, Response<Post> response) {
-                if(response.isSuccessful()) {
-                    ChatbotViewState viewState = getViewState().getValue();
-                    Log.i("cek", "post submitted to API." + response.body().getResult().get(0).getResponse());
-                    Log.i("cek", "berhasil");
-
-                    viewState.setError(null);
-
+            public void onResponse(Call<ChatBot> call, Response<ChatBot> response) {
+                if(response.isSuccessful()){
+                    Log.d("cek", "chatbot: response code("+String.valueOf(response.code())+")");
+                    Log.d("cek", "chatbot: response code("+String.valueOf(response.body().getResult())+")");
                     Chat res = new Chat(
-                            response.body().getResult().get(0).getResponse(),
+                            response.body().getResult(),
                             DateUtils.getDate(),
                             DateUtils.getTime(),
                             Chat.READ,
@@ -177,15 +172,59 @@ public class ChatbotViewModel extends BaseViewModel<ChatbotViewState> {
                     viewState.setChat(res);
                     getViewState().setValue(viewState);
                 } else {
-                    Log.i("cek", "tidak berhasil ");
+                    Log.d("cek", "chatbot: response code("+String.valueOf(response.code())+")");
                 }
             }
 
             @Override
-            public void onFailure(Call<Post> call, Throwable t) {
-                Log.e("cek", "Unable to submit post to API.");
+            public void onFailure(Call<ChatBot> call, Throwable t) {
+                Log.d("cek", "chatbot: response code(" + String.valueOf(t.getMessage()) + ")");
             }
         });
+//        Chat res = new Chat(
+//                "Cora tidak mengerti",
+//                DateUtils.getDate(),
+//                DateUtils.getTime(),
+//                Chat.READ,
+//                ChatbotAdapter.CHATBOT_NAME,
+//                ChatbotAdapter.CHATBOT_SEND_TO);
+//        viewState.setChat(res);
+//        getViewState().setValue(viewState);
+//        mAPIService.savePost(chat, userid).enqueue(new Callback<Post>() {
+//            @Override
+//            public void onResponse(Call<Post> call, Response<Post> response) {
+//                Log.d("cek", "chatbot: response code("+String.valueOf(response.code())+")");
+//                Log.d("cek", "chatbot: response:"+response.headers().toString());
+////                Log.d(TAG, "onResponse");
+////                get endpoint url from response
+//                Log.d(response.raw().request().url().toString(), "chatbot: url");
+////                get request body key from response
+//                if(response.isSuccessful()) {
+//                    ChatbotViewState viewState = getViewState().getValue();
+//                    Log.i("cek", "post submitted to API." + response.body().getResult().get(0).getResponse());
+//                    Log.i("cek", "berhasil");
+//
+//                    viewState.setError(null);
+//
+//                    Chat res = new Chat(
+//                            response.body().getResult().get(0).getResponse(),
+//                            DateUtils.getDate(),
+//                            DateUtils.getTime(),
+//                            Chat.READ,
+//                            ChatbotAdapter.CHATBOT_NAME,
+//                            ChatbotAdapter.CHATBOT_SEND_TO);
+//                    viewState.setChat(res);
+//                    getViewState().setValue(viewState);
+//                } else {
+//                    Log.i("cek", "tidak berhasil ");
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Post> call, Throwable t) {
+//                Log.e("cek", "Unable to submit post to API.", t);
+//            }
+//        });
 
     }
 

@@ -10,7 +10,7 @@ public interface APIService {
     //    @POST("/posts")
 //    @FormUrlEncoded
 //    Call<Post> savePost(@Body Post post);
-    @POST("/chatbot")
+    @POST("v2/chatbot")
     @FormUrlEncoded
     Call<Post> savePost(@Field("text") String text,
                         @Field("userid") long userId);
